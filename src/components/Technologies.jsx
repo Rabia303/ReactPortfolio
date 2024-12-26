@@ -10,7 +10,7 @@ import { FaNodeJs, FaGitAlt } from "react-icons/fa";
 const Technologies = () => {
     return (
         <div className="border-b border-neutral-900 pb-24 bg-gradient-to-b ">
-            <h2 className="my-20 text-center text-4xl  text-white">Technologies</h2>
+            <h2 className="my-20 text-center text-4xl">Technologies</h2>
 
             {/* Technologies Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-center px-4">

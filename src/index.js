@@ -12,21 +12,27 @@ export const EDUCATION = [
     degree: "Bachelor of Science, Computer Science",
     institution: "Dawood University of Engineering and Technology",
     timeline: "7th Semester | Expected Graduation: 2025",
+    courses: ["Data Structures", "Algorithms", "Computer Networks", "Operating Systems", "Database Management Systems"],
+    description: "I am a final year student of cs trying to learn new things and improve my skills and land an internship. I am currently pursuing my Bachelor of Science in Computer Science at Dawood University of Engineering and Technology. I have a strong foundation in computer science and am eager to apply my skills to real-world problems. "
   },
   {
     degree: "Advanced Diploma in Software Engineering (ADSE II)",
     institution: "Aptech Learning Center",
     timeline: "5th Semester | Expected Graduation: 2025",
+    courses: ["Frontend Developement","Mobile Developement","Backend Developement","Database Management","MERN Stack","Data Science","AI","Machine Learning"],
+    description: "I am a dedicated and hardworking student with a passion for technology. I am currently pursuing my Advanced Diploma in Software Engineering (ADSE II) at Aptech Learning Center. I have a strong foundation in software development and am eager to apply my skills to real-world problems. I am a quick learner and am always looking for ways to improve my skills."
   },
   {
     degree: "Intermediate in Pre-Engineering",
     institution: "Usman Public School, Campus 1",
     timeline: "Graduation Date: 2021",
+
   },
   {
     degree: "Matric in Computer Science",
     institution: "Programmer Girls School, Campus 1",
     timeline: "Graduation Date: 2019",
+   
   },
 ];
 
