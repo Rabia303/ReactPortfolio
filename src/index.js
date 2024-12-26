@@ -1,11 +1,34 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import project1 from "../src/assets/projects/project-1.jpg";
+import project2 from "../src/assets/projects/project-2.jpg";
+import project3 from "../src/assets/projects/project-3.jpg";
+import project4 from "../src/assets/projects/project-4.jpg";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `Driven by curiosity and a passion for innovation, I am a skilled mobile app and web developer with a knack for turning complex problems into seamless solutions. Proficient in Flutter, Firebase, and .NET, I specialize in creating impactful applications that not only meet but exceed user expectations. My focus is on delivering value through clean code, intuitive design, and scalable systems.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `As a computer science enthusiast, I thrive on solving challenges through technology. With a solid foundation in mobile and web development, I bring a creative and analytical approach to every project. From crafting user-friendly mobile apps with Flutter to designing robust web systems using .NET and SQL, I am dedicated to pushing the boundaries of innovation. Beyond coding, I enjoy exploring new tools, contributing to the tech community, and continuously honing my skills to make a meaningful impact.`;
+
+export const EDUCATION = [
+  {
+    degree: "Bachelor of Science, Computer Science",
+    institution: "Dawood University of Engineering and Technology",
+    timeline: "7th Semester | Expected Graduation: 2025",
+  },
+  {
+    degree: "Advanced Diploma in Software Engineering (ADSE II)",
+    institution: "Aptech Learning Center",
+    timeline: "5th Semester | Expected Graduation: 2025",
+  },
+  {
+    degree: "Intermediate in Pre-Engineering",
+    institution: "Usman Public School, Campus 1",
+    timeline: "Graduation Date: 2021",
+  },
+  {
+    degree: "Matric in Computer Science",
+    institution: "Programmer Girls School, Campus 1",
+    timeline: "Graduation Date: 2019",
+  },
+];
 
 export const EXPERIENCES = [
   {
@@ -70,7 +93,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+  address: "FB Area, Karachi",
+  phoneNo: "0324-1458873",
+  email: "rabiaimtiaz203@gmail.com",
 };
