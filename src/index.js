@@ -1,7 +1,14 @@
-import project1 from "../src/assets/projects/project-1.jpg";
-import project2 from "../src/assets/projects/project-2.jpg";
-import project3 from "../src/assets/projects/project-3.jpg";
-import project4 from "../src/assets/projects/project-4.jpg";
+import project1 from "../src/assets/projects/ngo1.jpg";
+import project2 from "../src/assets/projects/movie1.png";
+import project3 from "../src/assets/projects/cosmetic1.png";
+import project4 from "../src/assets/projects/calculator.jfif";
+import project5 from "../src/assets/projects/hr1.png";
+import project6 from "../src/assets/projects/expense1.jfif";
+import project7 from "../src/assets/projects/car1.jpg";
+import project8 from "../src/assets/projects/trip1.png";
+import project9 from "../src/assets/projects/laptop1.png";
+import project10 from "../src/assets/projects/restaurant1.png";
+import project11 from "../src/assets/projects/bmi2.jpg";
 
 export const HERO_CONTENT = `Driven by curiosity and a passion for innovation, I am a skilled mobile app and web developer with a knack for turning complex problems into seamless solutions. Proficient in Flutter, Firebase, and .NET, I specialize in creating impactful applications that not only meet but exceed user expectations. My focus is on delivering value through clean code, intuitive design, and scalable systems.`;
 
@@ -35,68 +42,95 @@ export const EDUCATION = [
    
   },
 ];
-
-export const EXPERIENCES = [
-  {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
-  {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
-];
-
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "Give-AID: NGO Management System",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "Engineered a web application for NGOs to efficiently manage operations through distinct Admin and User modules. Designed the architecture to support seamless content management and real-time user interaction. Developed with .NET MVC Core for scalable backend operations and SQL for robust data handling.",
+    technologies: [".NET MVC Core", "SQL"],
+    github: "https://github.com/Rabia303/NGO-WEBSITE-USING-DOTNET-MVC-CORE-AND-SQL",
   },
   {
-    title: "Task Management App",
+    title: "CineFlix: Customizable Movie Streaming Website",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "Developed an interactive platform for movie enthusiasts with features like detailed exploration, trailer viewing, and user review management. Built a dynamic admin dashboard enabling content customization and advanced user analytics. Crafted with PHP and MySQL for an integrated backend system.",
+    technologies: ["PHP", "MySQL"],
+    github: "https://github.com/Rabia303/CineFlix-movie-Streaming-Website-using-php-and-mysql",
   },
   {
-    title: "Portfolio Website",
+    title: "E-commerce Website for Cosmetics and Jewelry Business",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+      "Developed a dynamic e-commerce website enabling the cosmetics and jewelry business to expand.Implemented user-friendly features such as product browsing,shopping basket management, and order finalization. Enhanced the user experience by allowing clientsto input their details, search products, and facilitated administrators with inventory management, database maintenance, and report generation functionalities.",
+    technologies: ["PHP", "MySQL","Bootstrap"],
+    github: "https://github.com/Rabia303/Jewelery-and-cosmetics-website",
   },
   {
-    title: "Blogging Platform",
+    title: "MetricMate: Responsive Metric Conversion App",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+      "Developed a fully responsive metric conversion tool supporting multiple units like length, volume, and temperature. Enhanced user engagement with Bootstrap styling and real-time JavaScript-based functionality. Focused on delivering a sleek and intuitive interface for users.",
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    github: "https://github.com/Rabia303/metric-conversion",
+  },
+  {
+    title: "HRGenix: Streamlined Employee Management System",
+    image: project5,
+    description:
+      "Built a desktop application designed to simplify HR workflows, including employee record management, payroll automation, and expense tracking. Implemented role-based access and detailed reporting capabilities with C# and SQL for reliability.",
+    technologies: ["C#", "SQL"],
+  },
+  {
+    title: "FinTrack: Real-Time Expense Tracker App",
+    image: project6,
+    description:
+      "Developed a mobile application to simplify financial management by categorizing and tracking expenses. Implemented Firebase for real-time synchronization and secure data storage. Leveraged Flutter to create a visually appealing and seamless user interface.",
+    technologies: ["Flutter", "Firebase"],
+    github: "https://github.com/Rabia303/expense-tracker",
+  },
+  {
+    title: "DriveXChange: Car Rental Management System",
+    image: project7,
+    description:
+      "Engineered a car rental platform offering vehicle browsing, real-time bookings, and an admin dashboard for rental and user management. Designed a secure, scalable backend with PHP and MySQL to support high volumes of traffic.",
+    technologies: ["PHP", "MySQL","Bootstrap"],
+    github: "https://github.com/Rabia303/DriveXChange-CarRentalWebsite",
+  },
+  {
+    title: "TripBudgeter: Travel Budget Optimization App",
+    image: project8,
+    description:
+      "Made both User and Admin Panel.Built a cross-platform travel budgeting app with advanced trip management and real-time expense tracking. Utilized Flutter to craft a polished UI and Firebase for a secure backend infrastructure.",
+    technologies: ["Flutter", "Firebase"],
+    github: "https://github.com/Rabia303/tripBudget",
+  },
+  {
+    title: "Laptop Harbour: E-Commerce App for Tech Products",
+    image: project9,
+    description:
+      "Developed a modern e-commerce app for laptops, featuring intuitive search, wishlist functionality, and a streamlined checkout experience. Integrated Firebase Firestore for real-time data and scalable performance.",
+    technologies: ["Flutter", "Firebase"],
+    github: "https://github.com/Rabia303/Laptop-Harbour",
+  },
+  {
+    title: "DineFlow: Comprehensive Restaurant Management Solution",
+    image: project10,
+    description:
+      "Created a full-stack restaurant management system with robust Admin and User panels. Implemented features like menu management, real-time order tracking, and analytics dashboards. Leveraged .NET MVC Core for backend efficiency and SQL for database reliability.",
+    technologies: [".NET MVC Core", "SQL","Bootstrap"],
+  },
+  {
+    title: "BMI Calculator App",
+    image: project11,
+    description:
+      "Built a BMI Calculator app with an intuitive interface for users to calculate their body mass index and receive health suggestions. Designed with Flutter to deliver a responsive UI and seamless navigation.",
+    technologies: ["Flutter"],
+    github: "https://github.com/Rabia303/bmi_calculator",
   },
 ];
+
 
 export const CONTACT = {
   address: "FB Area, Karachi",
