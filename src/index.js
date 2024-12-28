@@ -12,7 +12,31 @@ import project11 from "../src/assets/projects/bmi2.jpg";
 
 export const HERO_CONTENT = `Driven by curiosity and a passion for innovation, I am a skilled mobile app and web developer with a knack for turning complex problems into seamless solutions. Proficient in Flutter, Firebase, and .NET, I specialize in creating impactful applications that not only meet but exceed user expectations. My focus is on delivering value through clean code, intuitive design, and scalable systems.`;
 
-export const ABOUT_TEXT = `As a computer science enthusiast, I thrive on solving challenges through technology. With a solid foundation in mobile and web development, I bring a creative and analytical approach to every project. From crafting user-friendly mobile apps with Flutter to designing robust web systems using .NET and SQL, I am dedicated to pushing the boundaries of innovation. Beyond coding, I enjoy exploring new tools, contributing to the tech community, and continuously honing my skills to make a meaningful impact.`;
+
+export const ABOUT_TEXT = `👨‍💻 Who I Am
+A passionate final-year Computer Science student and tech enthusiast with a knack for solving problems through technology. With a strong foundation in software engineering and real-world development, I aim to transform creative ideas into impactful solutions.
+
+📱 What I Do
+
+Mobile Development: Crafting intuitive apps with Flutter.
+Web Development: Designing robust systems with PHP, .NET, and SQL.
+Learning MERN Stack: Diving into the world of MongoDB, Express.js, React, and Node.js to expand my skills in full-stack development.
+Exploring AI: Aspiring to dig deeper into Artificial Intelligence and its potential to shape the future.
+
+🎯 What I’m Working On  
+I’m developing SheSafe, a final year project focused on enhancing women's safety through technology. The platform includes a web app using the MERN stack for real-time location tracking and emergency alerts, and a mobile app built with Flutter for offline access and quick emergency features. Additionally, it employs AI for Red Zone Mapping to identify high-risk areas and send alerts, combining web, mobile, and AI technologies for a meaningful impact.
+
+
+
+🚀 Hackathon Adventures
+
+Participated in MAJU ACM Hackathon at Mohammad Ali Jinnah University.
+Competed in TechWiz Hackathon, organized by Aptech.
+These events fueled my passion for collaboration, problem-solving, and tackling real-world challenges.
+
+
+`;
+
 
 export const EDUCATION = [
   {
@@ -25,7 +49,7 @@ export const EDUCATION = [
   {
     degree: "Advanced Diploma in Software Engineering (ADSE II)",
     institution: "Aptech Learning Center",
-    timeline: "5th Semester | Expected Graduation: 2025",
+    timeline: "6th Semester | Expected Graduation: 2025",
     courses: ["Frontend Developement","Mobile Developement","Backend Developement","Database Management","MERN Stack","Data Science","AI","Machine Learning"],
     description: "I am a dedicated and hardworking student with a passion for technology. I am currently pursuing my Advanced Diploma in Software Engineering (ADSE II) at Aptech Learning Center. I have a strong foundation in software development and am eager to apply my skills to real-world problems. I am a quick learner and am always looking for ways to improve my skills."
   },
@@ -81,6 +105,7 @@ export const PROJECTS = [
     description:
       "Built a desktop application designed to simplify HR workflows, including employee record management, payroll automation, and expense tracking. Implemented role-based access and detailed reporting capabilities with C# and SQL for reliability.",
     technologies: ["C#", "SQL"],
+    github: "https://github.com/Rabia303/Employee-Management-System",
   },
   {
     title: "FinTrack: Real-Time Expense Tracker App",
