@@ -9,7 +9,6 @@ import project8 from "../src/assets/projects/trip1.png";
 import project9 from "../src/assets/projects/laptop1.png";
 import project10 from "../src/assets/projects/restaurant1.png";
 import project11 from "../src/assets/projects/bmi2.jpg";
-<<<<<<< HEAD
 import project16 from "../src/assets/projects/hotel.webp";
 import project17 from "../src/assets/projects/chat.png";
 import project15 from "../src/assets/projects/translate.webp";
@@ -37,34 +36,6 @@ Participated in several Generative AI competitions, continuously improving my ex
 
 🚀 What I'm Working On
 Currently, I'm focusing on expanding my skills in Big Data and Hadoop, while working towards my long-term goals of launching a startup, securing a role in a big tech company, and consistently learning new technologies to improve my existing projects and create new ones.  
-=======
-
-export const HERO_CONTENT = `Driven by curiosity and a passion for innovation, I am a skilled mobile app and web developer with a knack for turning complex problems into seamless solutions. Proficient in Flutter, Firebase, and .NET, I specialize in creating impactful applications that not only meet but exceed user expectations. My focus is on delivering value through clean code, intuitive design, and scalable systems.`;
-
-
-export const ABOUT_TEXT = `👨‍💻 Who I Am
-A passionate final-year Computer Science student and tech enthusiast with a knack for solving problems through technology. With a strong foundation in software engineering and real-world development, I aim to transform creative ideas into impactful solutions.
-
-📱 What I Do
-
-Mobile Development: Crafting intuitive apps with Flutter.
-Web Development: Designing robust systems with PHP, .NET, and SQL.
-Learning MERN Stack: Diving into the world of MongoDB, Express.js, React, and Node.js to expand my skills in full-stack development.
-Exploring AI: Aspiring to dig deeper into Artificial Intelligence and its potential to shape the future.
-
-🎯 What I’m Working On  
-I’m developing SheSafe, a final year project focused on enhancing women's safety through technology. The platform includes a web app using the MERN stack for real-time location tracking and emergency alerts, and a mobile app built with Flutter for offline access and quick emergency features. Additionally, it employs AI for Red Zone Mapping to identify high-risk areas and send alerts, combining web, mobile, and AI technologies for a meaningful impact.
-
-
-
-🚀 Hackathon Adventures
-
-Participated in MAJU ACM Hackathon at Mohammad Ali Jinnah University.
-Competed in TechWiz Hackathon, organized by Aptech.
-These events fueled my passion for collaboration, problem-solving, and tackling real-world challenges.
-
-
->>>>>>> bcb4ccf2a6533dba885f76fb0cac72116baac42a
 `;
 
 
@@ -72,11 +43,7 @@ export const EDUCATION = [
   {
     degree: "Bachelor of Science, Computer Science",
     institution: "Dawood University of Engineering and Technology",
-<<<<<<< HEAD
     timeline: "Expected Graduation: 2025",
-=======
-    timeline: "7th Semester | Expected Graduation: 2025",
->>>>>>> bcb4ccf2a6533dba885f76fb0cac72116baac42a
     courses: ["Data Structures", "Algorithms", "Computer Networks", "Operating Systems", "Database Management Systems"],
     description: "I am a final year student of cs trying to learn new things and improve my skills and land an internship. I am currently pursuing my Bachelor of Science in Computer Science at Dawood University of Engineering and Technology. I have a strong foundation in computer science and am eager to apply my skills to real-world problems. "
   },
@@ -188,7 +155,6 @@ export const PROJECTS = [
     technologies: ["Flutter"],
     github: "https://github.com/Rabia303/bmi_calculator",
   },
-<<<<<<< HEAD
   {
   title: "Muhafiz: Karachi Crime Zone & Safety Platform",
   image: project12,
@@ -243,8 +209,6 @@ export const PROJECTS = [
   github: "https://github.com/Rabia303/DocuDraft-Pro---Ticket-to-Techwiz",
 },
 
-=======
->>>>>>> bcb4ccf2a6533dba885f76fb0cac72116baac42a
 ];
 
 
