@@ -1,5 +1,5 @@
 import { HERO_CONTENT } from "..";
-import profilePic from "../assets/imgb.jpeg"
+import profilePic from "../assets/imgb.jpeg";
 
 const Hero = () => {
   return (
@@ -7,23 +7,21 @@ const Hero = () => {
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
-            <h1 className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">Rabia Imtiaz</h1>
-<<<<<<< HEAD
-    <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">
-  Software Engineer | Web & Mobile Development | AI Enthusiast
-</span>
-
-=======
-      <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">Full Stack Developer</span>
->>>>>>> bcb4ccf2a6533dba885f76fb0cac72116baac42a
-      <p className="my-2 max-w-xl py-6  font-light tracking-tighter">{HERO_CONTENT}</p>
+            <h1 className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">
+              Rabia Imtiaz
+            </h1>
+            <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">
+              Software Engineer | Web & Mobile Development | AI Enthusiast
+            </span>
+            <p className="my-2 max-w-xl py-6 font-light tracking-tighter">
+              {HERO_CONTENT}
+            </p>
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8">
-        <div className="flex justify-center">
-        <img  src={profilePic} alt="Rabia Imtiaz" />
-        </div>
-        
+          <div className="flex justify-center">
+            <img src={profilePic} alt="Rabia Imtiaz" />
+          </div>
         </div>
       </div>
     </div>
