@@ -15,6 +15,8 @@ import project15 from "../src/assets/projects/translate.webp";
 import project12 from "../src/assets/projects/muhafiz.jpg";
 import project13 from "../src/assets/projects/text.png";
 import project14 from "../src/assets/projects/movie.webp";
+import { FaMobile, FaBrain, FaCode, FaUtensils } from "react-icons/fa";
+
 
 export const HERO_CONTENT = `Driven by curiosity and a passion for innovation, I am a full-stack developer with experience in web, mobile, and AI-powered applications. Proficient in MERN, .NET Core, Flutter, and Flask, I specialize in creating scalable and user-friendly solutions that turn complex problems into seamless experiences. My focus is on delivering value through clean code, intuitive design, and reliable systems that make a real impact.`;
 
@@ -31,7 +33,6 @@ Cross-Tech Expertise: Versatile in both frontend and backend stacks, from React 
 🎯 Achievements & Recognitions
 Nominated for HBL P@SHA ICT Awards 2025 for Muhafiz, my Karachi Crime Safety & Awareness Platform.  
 Selected for Aptech Vision 2025 for Multivox, an AI-powered instant dubbing and subtitling platform.  
-Hackathon Experience: Competed in TechWiz 5, TechWiz 6, and SMEC Hackathon (Sir Syed University), gaining exposure to collaboration, rapid prototyping, and problem-solving.  
 Participated in several Generative AI competitions, continuously improving my expertise in building innovative AI-driven applications.  
 
 🚀 What I'm Working On
@@ -65,6 +66,44 @@ export const EDUCATION = [
     institution: "Programmer Girls School, Campus 1",
     timeline: "Graduation Date: 2019",
    
+  },
+];
+export const HACKATHONS = [
+  {
+    title: "TechWiz 5 – Mobile Development",
+    role: "Backend Developer",
+    description:
+      "Built Trip Budgeter, a mobile app to manage travel expenses with real-time syncing and cloud storage.",
+    icon: FaMobile,
+    link: "https://github.com/Rabia303/tripBudget",
+    technologies: ["Flutter", "Firebase"],
+  },
+  {
+    title: "TechWiz 6 – Generative AI",
+    role: "Backend Developer",
+    description:
+      "Developed Talk-to-Text AI Web App, enabling speech-to-text and AI-powered interactive conversations.",
+    icon: FaBrain,
+    link: "https://github.com/Rabia303/TalkToTextPro-GenAI-Project", 
+    technologies: ["React (Vite)", "Flask", "MongoDB Atlas"],
+  },
+  {
+    title: "SMEC Hackathon – Sir Syed University",
+    role: "Full Stack Developer",
+    description:
+      "Created Clothes Donation Platform, connecting donors with NGOs via a responsive full-stack web app.",
+    icon: FaCode,
+    link: "https://github.com/Rabia303/SMEC_Hackathon_CharityLoop_v1", 
+    technologies: [".NET MVC Core", "Bootstrap", "SSMS"],
+  },
+  {
+    title: "ACM MAJU Hackathon",
+    role: "Backend Developer",
+    description:
+      "Built Restaurant Management System to streamline menu, orders, and staff management efficiently.",
+    icon: FaUtensils,
+    link: "https://github.com/Rabia303/ACM_MAJU-Hackathon-FullStackFrenzy", 
+    technologies: [".NET MVC Core", "Bootstrap", "SSMS"],
   },
 ];
 export const PROJECTS = [
