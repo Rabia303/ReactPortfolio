@@ -31,13 +31,11 @@ Cross-Tech Expertise: Versatile in both frontend and backend stacks, from React 
 🎯 Achievements & Recognitions
 Nominated for HBL P@SHA ICT Awards 2025 for Muhafiz, my Karachi Crime Safety & Awareness Platform.  
 Selected for Aptech Vision 2025 for Multivox, an AI-powered instant dubbing and subtitling platform.  
-Hackathon Experience: Competed in TechWiz 5, TechWiz 6, and SMEC Hackathon (Sir Syed University), gaining exposure to collaboration, rapid prototyping, and problem-solving.  
 Participated in several Generative AI competitions, continuously improving my expertise in building innovative AI-driven applications.  
 
 🚀 What I'm Working On
 Currently, I'm focusing on expanding my skills in Big Data and Hadoop, while working towards my long-term goals of launching a startup, securing a role in a big tech company, and consistently learning new technologies to improve my existing projects and create new ones.  
 `;
-
 
 export const EDUCATION = [
   {
