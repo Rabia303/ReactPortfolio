@@ -39,7 +39,6 @@ Participated in several Generative AI competitions, continuously improving my ex
 Currently, I'm focusing on expanding my skills in Big Data and Hadoop, while working towards my long-term goals of launching a startup, securing a role in a big tech company, and consistently learning new technologies to improve my existing projects and create new ones.  
 `;
 
-
 export const EDUCATION = [
   {
     degree: "Bachelor of Science, Computer Science",
