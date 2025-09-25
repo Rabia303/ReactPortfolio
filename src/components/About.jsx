@@ -284,7 +284,7 @@ const About = () => {
               </div>
 
               {/* Enhanced Skills Tags for Desktop */}
-              <div className="mt-8 p-6 bg-neutral-800/40 rounded-2xl border border-neutral-700/40 hover:border-neutral-600/50 transition-all duration-300">
+              {/* <div className="mt-8 p-6 bg-neutral-800/40 rounded-2xl border border-neutral-700/40 hover:border-neutral-600/50 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-neutral-200 mb-4 flex items-center">
                   <FaCode className="mr-3 text-blue-400" />
                   Technical Skills
@@ -299,7 +299,7 @@ const About = () => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

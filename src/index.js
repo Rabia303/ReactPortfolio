@@ -15,7 +15,7 @@ import project15 from "../src/assets/projects/translate.webp";
 import project12 from "../src/assets/projects/muhafiz.jpg";
 import project13 from "../src/assets/projects/text.png";
 import project14 from "../src/assets/projects/movie.webp";
-import { FaMobile, FaBrain, FaCode, FaUtensils } from "react-icons/fa";
+import { FaMobile, FaBrain, FaCode, FaUtensils, FaRobot } from "react-icons/fa";
 
 
 export const HERO_CONTENT = `Driven by curiosity and a passion for innovation, I am a full-stack developer with experience in web, mobile, and AI-powered applications. Proficient in MERN, .NET Core, Flutter, and Flask, I specialize in creating scalable and user-friendly solutions that turn complex problems into seamless experiences. My focus is on delivering value through clean code, intuitive design, and reliable systems that make a real impact.`;
@@ -67,7 +67,27 @@ export const EDUCATION = [
    
   },
 ];
+
+
 export const HACKATHONS = [
+    {
+    title: "SMEC Hackathon – Sir Syed University",
+    role: "Full Stack Developer",
+    description:
+      "Created Clothes Donation Platform, connecting donors with NGOs via a responsive full-stack web app.",
+    icon: FaCode,
+    link: "https://github.com/Rabia303/SMEC_Hackathon_CharityLoop_v1",
+    technologies: [".NET MVC Core", "Bootstrap", "SSMS"],
+  },
+  {
+    title: "ACM MAJU Hackathon",
+    role: "Backend Developer",
+    description:
+      "Built Restaurant Management System to streamline menu, orders, and staff management efficiently.",
+    icon: FaUtensils,
+    link: "https://github.com/Rabia303/ACM_MAJU-Hackathon-FullStackFrenzy",
+    technologies: [".NET MVC Core", "Bootstrap", "SSMS"],
+  },
   {
     title: "TechWiz 5 – Mobile Development",
     role: "Backend Developer",
@@ -83,28 +103,39 @@ export const HACKATHONS = [
     description:
       "Developed Talk-to-Text AI Web App, enabling speech-to-text and AI-powered interactive conversations.",
     icon: FaBrain,
-    link: "https://github.com/Rabia303/TalkToTextPro-GenAI-Project", 
+    link: "https://github.com/Rabia303/TalkToTextPro-GenAI-Project",
     technologies: ["React (Vite)", "Flask", "MongoDB Atlas"],
   },
+
   {
-    title: "SMEC Hackathon – Sir Syed University",
-    role: "Full Stack Developer",
+    title: "Tech Olympics – Season 01",
+    role: "Prompt Engineering Challenge",
     description:
-      "Created Clothes Donation Platform, connecting donors with NGOs via a responsive full-stack web app.",
-    icon: FaCode,
-    link: "https://github.com/Rabia303/SMEC_Hackathon_CharityLoop_v1", 
-    technologies: [".NET MVC Core", "Bootstrap", "SSMS"],
+      "Tasked with crafting a startup business proposal in Education/Finance using advanced prompt engineering. Explored how prompts guide AI to produce structured reports with market analysis, growth potential, and innovation strategy.",
+    technologies: ["Prompt Engineering", "AI"],
+    // link: "https://github.com/yourrepo/TechOlympicsS1", // update with your repo/demo
+    icon: FaBrain,
   },
   {
-    title: "ACM MAJU Hackathon",
-    role: "Backend Developer",
+    title: "Tech Olympics – Season 02",
+    role: "Generative AI Medical Chatbot",
     description:
-      "Built Restaurant Management System to streamline menu, orders, and staff management efficiently.",
-    icon: FaUtensils,
-    link: "https://github.com/Rabia303/ACM_MAJU-Hackathon-FullStackFrenzy", 
-    technologies: [".NET MVC Core", "Bootstrap", "SSMS"],
+      "Built a GenAI-powered medical chatbot featuring PDF export, voice input, email sharing (Nodemailer), and Gemini API integration. Developed frontend in React (Vite) and backend in Express.js. Explored enhancements like emoji support and WhatsApp sharing.",
+    technologies: ["React (Vite)", "Express.js", "Gemini API", "Nodemailer"],
+    link: "https://github.com/Rabia303/AI-CHAT-BOT",
+    icon: FaRobot,
+  },
+  {
+    title: "Tech Olympics – Season 03",
+    role: "Mobile App Development",
+    description:
+      "Completed a 2-hour coding challenge to build a Workshop Registration App with student and admin modules. Features included workshop CRUD, live dashboard, secure login, and validation. Designed with MVC architecture and Provider for state management.",
+    technologies: ["Flutter", "Dart", "Provider", "MVC Architecture"],
+    link: "https://github.com/Rabia303/TechOlymics-S3-MobileDev",
+    icon: FaMobile,
   },
 ];
+
 export const PROJECTS = [
   {
     title: "Give-AID: NGO Management System",

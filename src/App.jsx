@@ -7,6 +7,8 @@ import Projects from "./components/Project";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import Hackathons from "./components/Hackathons";
+import Datasets from "./components/Datasets";
+import Certifications from "./components/Certifications";
 const App = () => {
   return (
     <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
@@ -20,10 +22,11 @@ const App = () => {
         <Navbar />
         <Hero />
         <About />
-         <Hackathons />
+        <Hackathons />
+        <Certifications />
         <Technologies />
         <Education />
-       
+        <Datasets />
         <Projects />
         <Contact />
       </div>
