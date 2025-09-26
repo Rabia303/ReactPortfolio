@@ -2,7 +2,7 @@ import { PROJECTS } from "../index";
 
 const Projects = () => {
   return (
-    <div className="border-b border-neutral-900 pb-24">
+    <div >
       <h2 className="my-20 text-center text-4xl text-purple-500">Projects</h2>
       <div>
         {PROJECTS.map((project, index) => {

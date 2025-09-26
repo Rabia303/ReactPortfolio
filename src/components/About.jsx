@@ -49,7 +49,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="border-b border-neutral-800 pb-8 bg-gradient-to-br from-neutral-900 to-neutral-950">
+    <section id="about" className="pb-8">
       <div className="container mx-auto px-4">
         {/* Enhanced Heading */}
         <div className="my-16 text-center">
@@ -150,7 +150,7 @@ const About = () => {
           </div>
 
           {/* Skills Tags */}
-          <div className="mt-8 p-5 bg-neutral-800/40 rounded-2xl border border-neutral-700/40">
+          {/* <div className="mt-8 p-5 bg-neutral-800/40 rounded-2xl border border-neutral-700/40">
             <h3 className="text-lg font-semibold text-neutral-200 mb-4 flex items-center justify-center">
               <FaCode className="mr-2 text-blue-400" />
               Technical Skills
@@ -165,7 +165,7 @@ const About = () => {
                 </span>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Download Resume Button */}
           <div className="mt-8 text-center">

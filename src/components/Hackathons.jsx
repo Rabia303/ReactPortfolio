@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Hackathons = () => {
   return (
-    <section id="hackathons" className="py-12 border-b border-neutral-900">
+    <section id="hackathons" className="py-12">
       <h2 className="text-3xl font-bold text-center mb-10">
         🏆 Hackathon Experience
       </h2>

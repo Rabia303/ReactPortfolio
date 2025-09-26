@@ -39,7 +39,7 @@ const DATA_ANALYTICS_CERTS = [
     date: "Issued Jul 2025",
     credentialId: "NML9JXE62T4T",
     skills: ["Data Fundamentals", "Data Management"],
-    link: "https://www.coursera.org/account/accomplishments/verify/NML9JXE62T4T",
+    link: "https://www.coursera.org/account/accomplishments/records/NML9JXE62T4T",
     icon: "📈",
     gradient: "from-purple-500 to-pink-500",
     type: "data"
@@ -61,7 +61,7 @@ const DATA_ANALYTICS_CERTS = [
     date: "Issued Jul 2025",
     credentialId: "34QDEKOYWIYO",
     skills: ["Data Visualization", "Insight Generation"],
-    link: "https://www.coursera.org/account/accomplishments/verify/34QDEKOYWIYO",
+    link: "https://www.coursera.org/account/accomplishments/records/34QDEKOYWIYO",
     icon: "💡",
     gradient: "from-teal-500 to-cyan-500",
     type: "data"
@@ -72,7 +72,7 @@ const DATA_ANALYTICS_CERTS = [
     date: "Issued Jul 2025",
     credentialId: "53AIZBHWFD2X",
     skills: ["Regression Analysis", "Statistical Modeling"],
-    link: "https://www.coursera.org/account/accomplishments/verify/53AIZBHWFD2X",
+    link: "https://www.coursera.org/account/accomplishments/records/53AIZBHWFD2X",
     icon: "📉",
     gradient: "from-orange-500 to-red-500",
     type: "data"
@@ -83,7 +83,7 @@ const DATA_ANALYTICS_CERTS = [
     date: "Issued Jul 2025",
     credentialId: "MJCOZMPRGTS1",
     skills: ["Statistics", "Probability", "Analysis"],
-    link: "https://www.coursera.org/account/accomplishments/verify/MJCOZMPRGTS1",
+    link: "https://www.coursera.org/account/accomplishments/records/MJCOZMPRGTS1",
     icon: "⚡",
     gradient: "from-yellow-500 to-amber-500",
     type: "data"
@@ -94,7 +94,7 @@ const DATA_ANALYTICS_CERTS = [
     date: "Issued Jul 2025",
     credentialId: "INQSXD5C59QL",
     skills: ["Data Presentation", "Efficiency", "Reporting"],
-    link: "https://www.coursera.org/account/accomplishments/verify/INQSXD5C59QL",
+    link: "https://www.coursera.org/account/accomplishments/records/INQSXD5C59QL",
     icon: "🚀",
     gradient: "from-pink-500 to-rose-500",
     type: "data"
@@ -108,7 +108,7 @@ const AI_PYTHON_CERTS = [
     date: "Issued Jul 2025",
     credentialId: "94ZDJZ3LNIMK",
     skills: ["AI Prompting", "Specialization", "Google AI"],
-    link: "https://www.coursera.org/account/accomplishments/verify/94ZDJZ3LNIMK",
+    link: " https://www.coursera.org/account/accomplishments/specialization/94ZDJZ3LNIMK",
     icon: "🤖",
     gradient: "from-purple-500 to-indigo-500",
     description: "Mastering AI prompting techniques for various applications",
@@ -119,7 +119,7 @@ const AI_PYTHON_CERTS = [
     issuer: "Coursera",
     date: "Issued Jul 2025",
     skills: ["AI Essentials", "Prompt Engineering"],
-    link: "https://www.coursera.org/account/accomplishments/verify/94ZDJZ3LNIMK",
+    link: "https://www.credly.com/badges/d5d4e1ef-ecf2-4f67-863d-892b3d9faf03/linked_in_profile",
     icon: "⚡",
     gradient: "from-blue-500 to-purple-500",
     type: "ai"
@@ -141,7 +141,7 @@ const AI_PYTHON_CERTS = [
     date: "Issued Jul 2025",
     credentialId: "CCKENQPTHLPS",
     skills: ["Professional Prompting", "AI Communication"],
-    link: "https://www.coursera.org/account/accomplishments/verify/CCKENQPTHLPS",
+    link: "https://www.coursera.org/account/accomplishments/records/CCKENQPTHLPS",
     icon: "✍️",
     gradient: "from-yellow-500 to-orange-500",
     type: "ai"
@@ -152,7 +152,7 @@ const AI_PYTHON_CERTS = [
     date: "Issued Jul 2025",
     credentialId: "J30BQQK6C30D",
     skills: ["Creative AI", "Expert Systems", "Collaboration"],
-    link: "https://www.coursera.org/account/accomplishments/verify/J30BQQK6C30D",
+    link: "https://www.coursera.org/account/accomplishments/records/J30BQQK6C30D",
     icon: "🤝",
     gradient: "from-red-500 to-pink-500",
     type: "ai"
@@ -163,7 +163,7 @@ const AI_PYTHON_CERTS = [
     date: "Issued Jul 2025",
     credentialId: "2QU7TKB7B42D",
     skills: ["Machine Learning", "AI Fundamentals", "Algorithms"],
-    link: "https://www.coursera.org/account/accomplishments/verify/2QU7TKB7B42D",
+    link: "https://www.coursera.org/account/accomplishments/records/2QU7TKB7B42D",
     icon: "⚙️",
     gradient: "from-gray-500 to-blue-500",
     type: "ai"
@@ -270,7 +270,7 @@ const CertificationCard = ({ cert, index, onPreview }) => (
       </div>
     )}
 
-    <div className="bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900 p-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 border border-neutral-700 group-hover:border-neutral-400 h-full flex flex-col relative overflow-hidden">
+    <div className="p-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 border border-neutral-700 group-hover:border-neutral-400 h-full flex flex-col relative overflow-hidden">
       {/* Animated gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
       
@@ -407,7 +407,7 @@ const Lightbox = ({ image, onClose }) => (
 );
 
 const Certifications = () => {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activeTab, setActiveTab] = useState("dev");
   const [previewImage, setPreviewImage] = useState(null);
 
   const filteredCerts = activeTab === "all" 
@@ -415,7 +415,7 @@ const Certifications = () => {
     : ALL_CERTS.filter(cert => cert.type === activeTab);
 
   return (
-    <section className="border-b border-neutral-900 pb-24 bg-gradient-to-br from-neutral-950 via-black to-neutral-950">
+    <section className="pb-8">
       <div className="container mx-auto px-4 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

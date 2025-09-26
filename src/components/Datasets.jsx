@@ -26,7 +26,7 @@ const DATASETS = [
 
 const Datasets = () => {
   return (
-    <section className="border-b border-neutral-900 pb-12">
+    <section className="pb-12">
       <h2 className="text-3xl font-bold mb-8 text-center">
         📊 Datasets & Research
       </h2>
