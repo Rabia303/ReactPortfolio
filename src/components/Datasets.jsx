@@ -24,19 +24,21 @@ const DATASETS = [
   },
 ];
 
-const Datasets = () => {
+const Datasets = ({ hideHeader = false }) => {
   return (
-    <section className="pb-12">
+    <div className="pb-12">
+      {!hideHeader && (
       <h2 className="text-3xl font-bold mb-8 text-center">
         📊 Datasets & Research
       </h2>
+      )}
 
       <div className="flex justify-center">
         <div className="w-full max-w-2xl">
           {DATASETS.map((dataset, index) => (
             <div
               key={index}
-              className="bg-neutral-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
+              className="spotlight rounded-2xl border border-neutral-800 bg-neutral-900/60 p-8 transition hover:border-purple-500/50 hover:shadow-[0_0_40px_-12px_rgba(168,85,247,0.45)]"
             >
               <h3 className="text-xl font-semibold flex items-center gap-2 mb-3 justify-center">
                 <FaDatabase className="text-purple-400" />
@@ -46,13 +48,13 @@ const Datasets = () => {
 
               {/* Stats Section */}
               <div className="flex gap-6 justify-center text-sm mb-4 flex-wrap">
-                <span className="bg-purple-900 text-purple-300 px-3 py-1 rounded-full">
+                <span className="bg-purple-500/15 text-purple-300 px-3 py-1 rounded-full">
                   👁 {dataset.stats.views} Views
                 </span>
-                <span className="bg-green-900 text-green-300 px-3 py-1 rounded-full">
+                <span className="bg-emerald-500/15 text-emerald-300 px-3 py-1 rounded-full">
                   ⬇ {dataset.stats.downloads} Downloads
                 </span>
-                <span className="bg-blue-900 text-blue-300 px-3 py-1 rounded-full">
+                <span className="bg-sky-500/15 text-sky-300 px-3 py-1 rounded-full">
                   📂 {dataset.stats.records} Records
                 </span>
               </div>
@@ -62,7 +64,7 @@ const Datasets = () => {
                 {dataset.technologies.map((tech, i) => (
                   <span
                     key={i}
-                    className="bg-neutral-700 px-3 py-1 rounded-full text-xs text-neutral-300"
+                    className="bg-neutral-800 px-3 py-1 rounded-full text-xs text-purple-400"
                   >
                     {tech}
                   </span>
@@ -83,7 +85,7 @@ const Datasets = () => {
                   href={dataset.notebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition"
+                  className="inline-flex items-center gap-2 border border-neutral-700 hover:border-purple-500 text-white px-4 py-2 rounded-lg transition"
                 >
                   <FaBookOpen /> View Notebook
                 </a>
@@ -92,7 +94,7 @@ const Datasets = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

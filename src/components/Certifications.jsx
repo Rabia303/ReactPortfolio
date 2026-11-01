@@ -1,6 +1,8 @@
 // src/components/Certifications.jsx
 import { useState } from "react";
-import { FaCertificate, FaExternalLinkAlt, FaAward, FaTimes, FaTrophy, FaMedal, FaCode, FaDatabase, FaRobot } from "react-icons/fa";
+import { FaCertificate, FaExternalLinkAlt, FaAward, FaTimes, FaTrophy, FaMedal, FaCode, FaDatabase, FaRobot, FaChartBar, FaLayerGroup } from "react-icons/fa";
+
+const TYPE_ICONS = { data: FaChartBar, ai: FaRobot, dev: FaCode };
 import { motion, AnimatePresence } from "framer-motion";
 import img1 from "../assets/certifications/img1.jpg";
 import img2 from "../assets/certifications/img2.jpg";
@@ -246,128 +248,96 @@ const SOFTWARE_DEV_CERTS = [
 const ALL_CERTS = [...DATA_ANALYTICS_CERTS, ...AI_PYTHON_CERTS, ...SOFTWARE_DEV_CERTS];
 
 const TABS = [
-  { id: "all", label: "All Certifications", icon: "🎓", count: ALL_CERTS.length },
-  { id: "data", label: "Data Analytics", icon: "📊", count: DATA_ANALYTICS_CERTS.length },
-  { id: "ai", label: "AI & Python", icon: "🤖", count: AI_PYTHON_CERTS.length },
-  { id: "dev", label: "Software Development", icon: "💻", count: SOFTWARE_DEV_CERTS.length }
+  { id: "all", label: "All Certifications", icon: FaLayerGroup, count: ALL_CERTS.length },
+  { id: "data", label: "Data Analytics", icon: FaChartBar, count: DATA_ANALYTICS_CERTS.length },
+  { id: "ai", label: "AI & Python", icon: FaRobot, count: AI_PYTHON_CERTS.length },
+  { id: "dev", label: "Software Development", icon: FaCode, count: SOFTWARE_DEV_CERTS.length }
 ];
 
 const CertificationCard = ({ cert, index, onPreview }) => (
   <motion.div
-    initial={{ opacity: 0, y: 50 }}
+    initial={{ opacity: 0, y: 24 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    transition={{ duration: 0.5, delay: index * 0.1 }}
-    whileHover={{ y: -8, scale: 1.02 }}
-    className="relative group"
+    transition={{ duration: 0.4, delay: Math.min(index, 5) * 0.06 }}
+    className="spotlight group flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/60 transition hover:-translate-y-1 hover:border-purple-500/50 hover:shadow-[0_0_40px_-12px_rgba(168,85,247,0.45)]"
   >
-    {/* Ribbon for special achievements */}
-    {cert.ribbon && (
-      <div className="absolute -top-3 -right-3 z-10">
-        <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-xs font-bold rotate-3 transform shadow-lg border-2 border-yellow-300">
-          {cert.ribbon}
+    {cert.image && (
+      <button
+        onClick={() => onPreview(cert.image)}
+        className="relative aspect-[4/3] overflow-hidden bg-neutral-950"
+        aria-label={`Preview ${cert.title}`}
+      >
+        {/* blurred copy fills the frame; the full certificate sits on top, uncropped */}
+        <img
+          src={cert.image}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-xl"
+        />
+        <img
+          src={cert.image}
+          alt={cert.title}
+          loading="lazy"
+          className="relative h-full w-full object-contain p-4 drop-shadow-[0_10px_25px_rgba(0,0,0,0.6)] transition-transform duration-500 group-hover:scale-105"
+        />
+        <span className="absolute inset-0 flex items-center justify-center bg-black/50 text-sm text-white opacity-0 transition group-hover:opacity-100">
+          Click to preview
         </span>
-      </div>
+      </button>
     )}
 
-    <div className="p-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 border border-neutral-700 group-hover:border-neutral-400 h-full flex flex-col relative overflow-hidden">
-      {/* Animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
-      
-      {/* Header with gradient icon */}
-      <div className="flex items-start justify-between mb-4 relative z-10">
-        <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${cert.gradient} flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-          {cert.icon}
+    <div className="flex flex-1 flex-col p-5">
+      <div className="mb-3 flex items-center gap-3">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-purple-500/15 text-purple-300">
+          {(() => { const Icon = TYPE_ICONS[cert.type] || FaCertificate; return <Icon />; })()}
+        </span>
+        <div className="min-w-0">
+          <p className="truncate text-xs text-neutral-400">{cert.issuer}</p>
+          <p className="text-xs text-neutral-500">{cert.date}</p>
         </div>
-        <FaCertificate className="text-2xl text-yellow-400 opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      {/* Image if available */}
-      {cert.image && (
-        <div className="flex justify-center mb-4 relative z-10">
-          <div className="relative overflow-hidden rounded-lg shadow-md cursor-pointer" onClick={() => onPreview(cert.image)}>
-            <img
-              src={cert.image}
-              alt={cert.title}
-              className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <span className="text-white text-sm font-medium bg-black/50 px-3 py-1 rounded-lg">Click to Preview</span>
-            </div>
-          </div>
+      <h4 className="mb-2 font-semibold leading-snug text-white">{cert.title}</h4>
+
+      {cert.ribbon && (
+        <span className="mb-2 w-fit rounded-full bg-purple-500/15 px-2.5 py-0.5 text-xs text-purple-300">
+          {cert.ribbon.replace(/^[^A-Za-z]+/, "")}
+        </span>
+      )}
+
+      {cert.description && (
+        <p className="mb-3 line-clamp-2 text-sm text-neutral-400">{cert.description}</p>
+      )}
+
+      {cert.skills && (
+        <div className="mb-4 flex flex-wrap gap-1.5">
+          {cert.skills.slice(0, 4).map((skill) => (
+            <span key={skill} className="rounded bg-neutral-800 px-2 py-0.5 text-xs text-purple-400">
+              {skill}
+            </span>
+          ))}
         </div>
       )}
 
-      {/* Content */}
-      <div className="flex-1 relative z-10">
-        <h4 className="text-lg font-bold mb-2 leading-tight group-hover:text-white transition-colors duration-300 line-clamp-2">
-          {cert.title}
-        </h4>
-        
-        <div className="flex items-center text-sm text-neutral-300 mb-2">
-          <span className="bg-neutral-700/80 px-3 py-1 rounded-lg backdrop-blur-sm">{cert.issuer}</span>
-        </div>
-        
-        <div className="flex justify-between items-center mb-3">
-          <p className="text-xs text-neutral-400 font-medium">{cert.date}</p>
-          {cert.credentialId && (
-            <p className="text-xs text-neutral-500 font-mono">ID: {cert.credentialId}</p>
-          )}
-        </div>
-
-        {/* Description */}
-        {cert.description && (
-          <p className="text-sm text-neutral-300 mb-4 leading-relaxed bg-neutral-800/50 p-3 rounded-lg">
-            {cert.description}
-          </p>
-        )}
-
-        {/* Skills */}
-        {cert.skills && (
-          <div className="flex flex-wrap gap-2 mb-4">
-            {cert.skills.map((skill, i) => (
-              <motion.span
-                key={i}
-                whileHover={{ scale: 1.05 }}
-                className="bg-neutral-700/80 px-3 py-1.5 rounded-lg text-xs text-neutral-200 hover:bg-neutral-600 transition-all duration-200 backdrop-blur-sm cursor-default border border-neutral-600/50"
-              >
-                {skill}
-              </motion.span>
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* Action Buttons */}
-      <div className={`flex gap-3 mt-auto relative z-10 ${cert.image && cert.link ? 'flex-col' : ''}`}>
+      <div className="mt-auto flex gap-4 text-sm">
         {cert.link && (
-          <motion.a
+          <a
             href={cert.link}
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-4 py-3 rounded-lg transition-all duration-300 font-medium shadow-lg hover:shadow-xl flex-1 text-center group/btn"
+            className="inline-flex items-center gap-1.5 text-purple-400 hover:text-purple-300"
           >
-            <span className="group-hover/btn:translate-x-1 transition-transform duration-200">
-              View Credential
-            </span>
-            <FaExternalLinkAlt className="text-sm group-hover/btn:translate-x-1 transition-transform duration-200" />
-          </motion.a>
+            View credential <FaExternalLinkAlt className="text-xs" />
+          </a>
         )}
-        
         {cert.image && (
-          <motion.button
+          <button
             onClick={() => onPreview(cert.image)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-4 py-3 rounded-lg transition-all duration-300 font-medium shadow-lg hover:shadow-xl flex-1 text-center group/btn"
+            className="inline-flex items-center gap-1.5 text-purple-400 hover:text-purple-300"
           >
-            <span className="group-hover/btn:translate-x-1 transition-transform duration-200">
-              Preview Certificate
-            </span>
-            <FaAward className="text-sm group-hover/btn:translate-x-1 transition-transform duration-200" />
-          </motion.button>
+            Preview <FaAward className="text-xs" />
+          </button>
         )}
       </div>
     </div>
@@ -406,17 +376,20 @@ const Lightbox = ({ image, onClose }) => (
   </motion.div>
 );
 
-const Certifications = () => {
-  const [activeTab, setActiveTab] = useState("dev");
+const Certifications = ({ hideHeader = false }) => {
+  const [activeTab, setActiveTab] = useState("ai");
   const [previewImage, setPreviewImage] = useState(null);
+  const [showAllMobile, setShowAllMobile] = useState(false);
+  const MOBILE_COUNT = 3;
 
   const filteredCerts = activeTab === "all" 
     ? ALL_CERTS 
     : ALL_CERTS.filter(cert => cert.type === activeTab);
 
   return (
-    <section className="pb-8">
+    <div className="pb-8">
       <div className="container mx-auto px-4 max-w-7xl">
+        {!hideHeader && (
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -435,6 +408,7 @@ const Certifications = () => {
             Each certification represents hands-on experience and proven skills.
           </p>
         </motion.div>
+        )}
 
         {/* Tab Navigation */}
         <motion.div
@@ -442,23 +416,23 @@ const Certifications = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="-mx-4 mb-10 flex gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:pb-0 [scrollbar-width:none]"
         >
           {TABS.map((tab) => (
             <motion.button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => { setActiveTab(tab.id); setShowAllMobile(false); }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-3 ${
+              className={`flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border px-4 py-1.5 text-sm transition ${
                 activeTab === tab.id
-                  ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg"
-                  : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                  ? "border-purple-500 bg-purple-500/15 text-purple-200"
+                  : "border-neutral-800 text-neutral-400 hover:text-white"
               }`}
             >
-              <span className="text-xl">{tab.icon}</span>
+              <tab.icon />
               <span>{tab.label}</span>
-              <span className="bg-black/20 px-2 py-1 rounded-full text-xs">
+              <span className="text-xs opacity-60">
                 {tab.count}
               </span>
             </motion.button>
@@ -471,19 +445,27 @@ const Certifications = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8"
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           <AnimatePresence mode="wait">
             {filteredCerts.map((cert, index) => (
-              <CertificationCard
-                key={`${cert.title}-${index}`}
-                cert={cert}
-                index={index}
-                onPreview={setPreviewImage}
-              />
+              <div key={`${cert.title}-${index}`} className={!showAllMobile && index >= MOBILE_COUNT ? "hidden sm:block" : ""}>
+                <CertificationCard cert={cert} index={index} onPreview={setPreviewImage} />
+              </div>
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {filteredCerts.length > MOBILE_COUNT && (
+          <div className="mt-8 text-center sm:hidden">
+            <button
+              onClick={() => setShowAllMobile((v) => !v)}
+              className="rounded-full border border-purple-500/50 px-6 py-2.5 text-sm text-purple-300"
+            >
+              {showAllMobile ? "Show fewer" : `Show all ${filteredCerts.length} certificates`}
+            </button>
+          </div>
+        )}
 
         {/* Empty State */}
         {filteredCerts.length === 0 && (
@@ -508,7 +490,7 @@ const Certifications = () => {
           )}
         </AnimatePresence>
       </div>
-    </section>
+    </div>
   );
 };
 

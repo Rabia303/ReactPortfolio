@@ -1,12 +1,14 @@
 import { HACKATHONS } from "..";
 import { FaGithub } from "react-icons/fa";
 
-const Hackathons = () => {
+const Hackathons = ({ hideHeader = false }) => {
   return (
-    <section id="hackathons" className="py-12">
+    <div className="py-12">
+      {!hideHeader && (
       <h2 className="text-3xl font-bold text-center mb-10">
         🏆 Hackathon Experience
       </h2>
+      )}
       <div className="grid gap-6 md:grid-cols-2">
         {HACKATHONS.map((hack, index) => {
           const Icon = hack.icon;
@@ -14,14 +16,14 @@ const Hackathons = () => {
           return (
             <div
               key={index}
-              className="bg-neutral-800 p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition transform"
+              className="spotlight rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6 transition hover:-translate-y-1 hover:border-purple-500/50 hover:shadow-[0_0_40px_-12px_rgba(168,85,247,0.45)]"
             >
               {/* Title + Icon */}
               <div className="flex items-center gap-3 mb-3">
-                <div className="p-3 bg-neutral-700 rounded-lg">
-                  <Icon className="text-yellow-400 text-lg" />
+                <div className="rounded-lg bg-neutral-800 p-3">
+                  <Icon className="text-purple-400 text-lg" />
                 </div>
-                <h3 className="text-xl font-semibold">{hack.title}</h3>
+                <h3 className="text-lg font-semibold text-white">{hack.title}</h3>
               </div>
 
               {/* Role */}
@@ -37,29 +39,28 @@ const Hackathons = () => {
                 {hack.technologies?.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 text-xs font-medium rounded-full bg-neutral-700 text-yellow-300"
+                    className="px-3 py-1 text-xs font-medium rounded-full bg-neutral-800 text-purple-400"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
 
-              {/* GitHub link with logo */}
               {hack.link && (
                 <a
                   href={hack.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-neutral-300 hover:text-yellow-400"
+                  className="inline-flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300"
                 >
-                  <FaGithub className="text-lg" /> View on GitHub
+                  <FaGithub /> View on GitHub
                 </a>
               )}
             </div>
           );
         })}
       </div>
-    </section>
+    </div>
   );
 };
 

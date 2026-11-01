@@ -1,3 +1,4 @@
+import SectionHeading from "./SectionHeading";
 import { RiReactjsLine } from "react-icons/ri";
 import {
     SiJavascript, SiHtml5, SiCss3, SiMongodb, SiMysql,
@@ -5,10 +6,12 @@ import {
     SiFigma, SiTailwindcss, SiBootstrap, SiDotnet,
     SiFlutter, SiPostman, SiTypescript, SiExpress, SiPython,
     SiCplusplus, SiDart, SiJquery, SiPandas, SiJupyter,
-    SiOpenai, SiGoogle, SiVite
+    SiOpenai, SiGoogle, SiVite, SiIntellijidea, SiTableau
 } from "react-icons/si";
-import { FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { TbApi } from "react-icons/tb";
+import { FaNodeJs, FaGitAlt, FaJava } from "react-icons/fa";
+import { TbApi, TbBrandCSharp, TbBrandVisualStudio } from "react-icons/tb";
+import { VscVscode } from "react-icons/vsc";
+import { DiMsqlServer } from "react-icons/di";
 
 const Technologies = () => {
     const technologyCategories = [
@@ -21,12 +24,12 @@ const Technologies = () => {
                 { icon: <SiJavascript className="text-yellow-400" />, label: "JavaScript", category: "Language" },
                 { icon: <SiTypescript className="text-blue-400" />, label: "TypeScript", category: "Language" },
                 { 
-                    icon: <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java" className="w-10 h-10 mx-auto" />,
+                    icon: <FaJava className="text-orange-500" />,
                     label: "Java", category: "Language"
                 },
                 { icon: <SiCplusplus className="text-blue-600" />, label: "C++", category: "Language" },
                 { 
-                    icon: <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C#" className="w-10 h-10 mx-auto" />,
+                    icon: <TbBrandCSharp className="text-purple-500" />,
                     label: "C#", category: "Language"
                 },
                 { icon: <SiPhp className="text-indigo-500" />, label: "PHP", category: "Language" },
@@ -52,7 +55,7 @@ const Technologies = () => {
                 { icon: <SiLaravel className="text-red-500" />, label: "Laravel", category: "Backend" },
                 { icon: <TbApi className="text-green-300" />, label: "REST APIs", category: "Backend" },
                 { 
-                    icon: <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg" alt="ASP.NET MVC" className="w-10 h-10 mx-auto" />,
+                    icon: <SiDotnet className="text-violet-400" />,
                     label: "ASP.NET MVC", category: "Backend"
                 },
             ]
@@ -66,7 +69,7 @@ const Technologies = () => {
                 { icon: <SiMongodb className="text-green-500" />, label: "MongoDB", category: "Database" },
                 { icon: <SiFirebase className="text-yellow-500" />, label: "Firebase", category: "Database" },
                 { 
-                    icon: <img src="https://cdn-icons-png.flaticon.com/512/5968/5968364.png" alt="SQL Server" className="w-10 h-10 mx-auto" />,
+                    icon: <DiMsqlServer className="text-red-500" />,
                     label: "SQL Server", category: "Database"
                 },
                 { icon: <SiMongodb className="text-green-400" />, label: "MongoDB Atlas", category: "Database" },
@@ -77,15 +80,15 @@ const Technologies = () => {
                 { icon: <SiPostman className="text-orange-400" />, label: "Postman", category: "Tool" },
                 { icon: <SiFigma className="text-purple-400" />, label: "Figma", category: "Tool" },
                 { 
-                    icon: <img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS Code" className="w-10 h-10 mx-auto" />,
+                    icon: <VscVscode className="text-sky-500" />,
                     label: "VS Code", category: "Tool"
                 },
                 { 
-                    icon: <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Visual_Studio_Icon_2019.svg" alt="Visual Studio" className="w-10 h-10 mx-auto" />,
+                    icon: <TbBrandVisualStudio className="text-purple-400" />,
                     label: "Visual Studio", category: "Tool"
                 },
                 { 
-                    icon: <img src="https://cdn-icons-png.flaticon.com/512/226/226772.png" alt="IntelliJ" className="w-10 h-10 mx-auto" />,
+                    icon: <SiIntellijidea className="text-pink-500" />,
                     label: "IntelliJ", category: "Tool"
                 },
 
@@ -93,7 +96,7 @@ const Technologies = () => {
                 { icon: <SiPandas className="text-red-400" />, label: "Pandas", category: "Data Science" },
                 { icon: <SiJupyter className="text-orange-500" />, label: "Jupyter", category: "Data Science" },
                 { 
-                    icon: <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" className="w-10 h-10 mx-auto" />,
+                    icon: <SiTableau className="text-blue-400" />,
                     label: "Tableau", category: "Analytics"
                 },
 
@@ -105,101 +108,57 @@ const Technologies = () => {
         }
     ];
 
+    const GROUPS = [
+        { title: "Languages", match: ["Language"] },
+        { title: "Frontend", match: ["Frontend"] },
+        { title: "Backend", match: ["Backend"] },
+        { title: "Mobile", match: ["Mobile"] },
+        { title: "Databases", match: ["Database"] },
+        { title: "AI & Data", match: ["AI", "Data Science", "Analytics"] },
+        { title: "Tools", match: ["Tool"] },
+    ];
+    const allSkills = technologyCategories.flatMap((c) => c.skills);
+    // Highlighted as core strengths
+    const CORE = ["Python", "TypeScript", "C#", "React", "Angular", ".NET Core", "ASP.NET MVC", "Flask", "SQL Server", "MongoDB", "Gemini API"];
+
     return (
-        <section id="technologies" className="relative py-20">
-            {/* Background Elements */}
-            <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-10 left-10 w-72 h-72 bg-purple-500 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-500 rounded-full blur-3xl"></div>
-            </div>
+        <div className="py-16">
+            <SectionHeading eyebrow="What I work with" title="Skills" subtitle="Technologies and tools I use to bring ideas to life" />
+            <p className="-mt-6 mb-10 flex items-center justify-center gap-2 text-sm text-neutral-400">
+                <span className="inline-block h-3 w-3 rounded border border-purple-500/60 bg-purple-500/20" /> Core strengths
+            </p>
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-purple-500 to-purple-400 bg-clip-text text-transparent mb-4">
-                        Tech Stack
-                    </h2>
-                    <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                        Technologies and tools I use to bring ideas to life and create impactful solutions
-                    </p>
-                </div>
-
-                <div className="space-y-20">
-                    {technologyCategories.map((category, categoryIndex) => (
-                        <div key={categoryIndex}>
-                            <div className="text-center mb-12">
-                                <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
-                                    {category.title}
-                                </h3>
-                                <p className="text-lg text-gray-400">{category.subtitle}</p>
-                                <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-purple-500 mx-auto mt-4 rounded-full"></div>
-                            </div>
-                            
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
-                                {category.skills.map((tech, index) => (
-                                    <div
-                                        key={index}
-                                        className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/80 rounded-2xl border border-gray-700/50 p-6 text-center transition-all duration-500 hover:scale-105 hover:border-purple-500/30 hover:shadow-2xl hover:shadow-purple-500/20 backdrop-blur-sm"
+            <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2">
+                {GROUPS.map((group) => {
+                    const skills = allSkills.filter((t) => group.match.includes(t.category));
+                    if (!skills.length) return null;
+                    return (
+                        <div key={group.title} className="spotlight rounded-2xl border border-neutral-800 bg-neutral-900/60 p-5">
+                            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-neutral-400">
+                                {group.title}
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                                {[...skills].sort((a, b) => CORE.includes(b.label) - CORE.includes(a.label)).map((tech) => (
+                                    <span
+                                        key={tech.label}
+                                        className={`flex items-center gap-2 rounded-lg border px-3 py-1.5 text-sm transition hover:border-purple-500/50 ${
+                                            CORE.includes(tech.label)
+                                                ? "border-purple-500/50 bg-purple-500/10 text-white shadow-[0_0_20px_-8px_rgba(168,85,247,0.6)]"
+                                                : "border-neutral-800 bg-neutral-950/60 text-neutral-300"
+                                        }`}
                                     >
-                                        {/* Gradient Border Effect */}
-                                        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-500/10 rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
-                                        
-                                        {/* Animated Background */}
-                                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-700"></div>
-                                        
-                                        {/* Icon Container */}
-                                        <div className="relative z-10 mb-4">
-                                            <div className="group/icon inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
-                                                <div className="text-3xl">
-                                                    {tech.icon}
-                                                </div>
-                                                {/* Individual Icon Glow Effect */}
-                                                <div className="absolute inset-0 rounded-2xl bg-purple-500/20 blur-md group-hover/icon:opacity-100 opacity-0 transition-opacity duration-300"></div>
-                                            </div>
-                                        </div>
-                                        
-                                        {/* Label */}
-                                        <p className="relative z-10 text-white font-semibold text-sm mb-2">
-                                            {tech.label}
-                                        </p>
-                                        
-                                        {/* Category Badge */}
-                                        <span className="relative z-10 text-xs text-gray-400 bg-gray-800/50 rounded-full px-2 py-1">
-                                            {tech.category}
+                                        <span className="flex h-5 w-5 items-center justify-center text-lg [&_img]:h-5 [&_img]:w-5">
+                                            {tech.icon}
                                         </span>
-                                        
-                                        {/* Hover Glow */}
-                                        <div className="absolute inset-0 rounded-2xl bg-purple-500/10 blur-xl hover:opacity-100 opacity-0 transition-opacity duration-500"></div>
-                                    </div>
+                                        {tech.label}
+                                    </span>
                                 ))}
                             </div>
                         </div>
-                    ))}
-                </div>
-
-                {/* Expertise Summary */}
-                <div className="mt-20 text-center">
-                    <div className="relative bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-3xl p-8 border border-gray-700/50 backdrop-blur-sm overflow-hidden">
-                        <div className="absolute inset-0 opacity-5">
-                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] bg-[length:20px_20px]"></div>
-                        </div>
-                        
-                        <div className="relative z-10">
-                            <h3 className="text-3xl font-bold text-white mb-6">
-                                Technical Expertise
-                            </h3>
-                            <p className="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                                As a <span className="text-purple-400 font-semibold">Full-Stack Developer</span>, I specialize in creating 
-                                scalable applications using modern technologies like <span className="text-purple-400">React</span>, 
-                                <span className="text-green-400"> Node.js</span>, <span className="text-purple-400">.NET Core</span>, and 
-                                <span className="text-yellow-400"> Python</span>. With expertise in both <span className="text-purple-400">MERN stack</span> and 
-                                <span className="text-purple-400"> .NET ecosystem</span>, I deliver end-to-end solutions with focus on 
-                                performance, security, and user experience.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                    );
+                })}
             </div>
-        </section>
+        </div>
     );
 };
 
